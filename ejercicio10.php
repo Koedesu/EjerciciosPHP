@@ -20,7 +20,7 @@ if($_POST){
     <title>Operadores aritmeticos</title>
 </head>
 <body>
-    <form action="ejercicio9.php" method="post">
+    <form action="ejercicio10.php" method="post">
         valor A:
         <input type="text" name="valorA" id="">
 </br>
