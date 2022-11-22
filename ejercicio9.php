@@ -4,15 +4,10 @@ if($_POST){
     $valorA = $_POST['valorA'];
     $valorB = $_POST['valorB'];
 
-    //Suma
-    $suma = $valorA+$valorB;
-    $resta = $valorA-$valorB;
-    $division = $valorA/$valorB;
-    $multiplicacion = $valorA*$valorB;
-    echo "Suma: ".$suma."</br>";
-    echo "Resta: ".$resta."</br>";
-    echo "Division: ".$division."</br>";
-    echo "Multiplicacion: ".$multiplicacion."</br>";
+    if($valorA > $valorB){
+        echo "El valor de A es mayor que el valor de B";
+    }
+
 }
 
 ?>
@@ -25,7 +20,7 @@ if($_POST){
     <title>Operadores aritmeticos</title>
 </head>
 <body>
-    <form action="ejercicio8.php" method="post">
+    <form action="ejercicio9.php" method="post">
         valor A:
         <input type="text" name="valorA" id="">
 </br>
