@@ -2,10 +2,10 @@
 
 // INSTRUCCIÓN PARA IMPRIMIR MENSAJES
 
-echo "Hola Mundo";
+echo "Hola Mundo </br>";
 
 ##Este es para mas info
-print_r("Hola Develoteca");
+print_r("Hola Develoteca</br>");
 
 ##Este tambien es para mas info
 print("Hola Mundo");

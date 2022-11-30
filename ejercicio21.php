@@ -8,6 +8,12 @@ echo "</br>".$frutas[0];
 echo "</br>".$frutas[1];
 echo "</br>".$frutas[2];
 
+for($indice=0; $indice<3;$indice++){
+
+    echo "</br>".$frutas [$indice];
+
+}
+
 ?>
 
 <!DOCTYPE html>

@@ -3,11 +3,14 @@
 $frutas = array("f"=>"Fresa","m"=>"Manzana","p"=>"Pera");
 print_r($frutas);
 
-echo "</br".$frutas["f"];
+echo $frutas["f"]."</br>";
 
-for ($indice=0;$indice<3;$indice++){
-    
-    echo $frutas[$indice];
+foreach($frutas as $indice=>$valor){
+
+    echo "El valor ".$valor." Tiene el indice ".$indice."</br>";
+
 }
+
+
 
 ?>
