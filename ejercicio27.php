@@ -4,7 +4,7 @@ class unaClase{
 
 public static function unMetodo(){
 
-    echo "Hola soy un metodo estatico </br>";
+    echo "Hola soy un método estatico </br>";
 
 }
 
