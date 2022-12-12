@@ -5,6 +5,7 @@ if($_POST){
 
     $txtNombre= (isset($_POST['txtNombre']))?$_POST['txtNombre']:"";
 
+
 }
 
 ?>
@@ -19,16 +20,23 @@ if($_POST){
 </head>
 <body>
     
-    <strong> Hola </strong>: <?php
+    <?php if($_POST){ ?>
 
-    echo $txtNombre;
+        <strong> Hola </strong>: <?php echo $txtNombre;  ?>
+    
+    
+    <?php  }  ?>  
 
-
-    ?>
 
     <form action="ejercicio31.php" method="post">
 
-        <input type="text" name="txtNombre" id="">
+        Nombre:</br>
+        <input value="<?php echo $txtNombre; ?>" type="text" name="txtNombre" id="">
+        </br>
+        Te gustá?:</br>
+        </br>php
+        </br>html
+        </br>css
 
         <input type="submit" value="Enviar informacion">
 
