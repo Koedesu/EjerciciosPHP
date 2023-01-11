@@ -7,6 +7,8 @@ $chkphp="";
 $chkhtml="";
 $chkcss="";
 
+$lstAnime ="";
+
 if($_POST){
 
     $txtNombre= (isset($_POST['txtNombre']))?$_POST['txtNombre']:"";
@@ -15,6 +17,10 @@ if($_POST){
     $chkphp= (isset($_POST['chkphp'])=="si")?"checked":"";
     $chkhtml= (isset($_POST['chkhtml'])=="si")?"checked":"";
     $chkcss= (isset($_POST['chkcss'])=="si")?"checked":"";
+
+    $lstAnime = (isset($_POST['lsAnime']))?$_POST['lsAnime']:"";
+
+    //print_r($lstAnime);
 
     //print_r($rdgLenguaje);
 }
@@ -36,7 +42,15 @@ if($_POST){
         <strong> Hola </strong>: <?php echo $txtNombre;  ?>
         <br/>
         <strong> Tu lenguaje es:  </strong>
-        <?php echo $rdgLenguaje; ?>
+        <?php echo $rdgLenguaje; ?> 
+        <br/>
+        <strong>Estas aprendiendo: </strong> <br/>
+        -<?php echo ($chkphp=="checked")?"PHP":""; ?><br/>
+        -<?php echo ($chkhtml=="checked")?"HTML":""; ?><br/>
+        -<?php echo ($chkcss=="checked")?"CSS":""; ?><br/>
+        <br/>
+        <strong> Tu anime favorito es: </strong>
+        <?php echo $lstAnime; ?>
     
     <?php  }  ?>  
 
@@ -55,6 +69,17 @@ if($_POST){
         <br/> php: <input type="checkbox" <?php echo $chkphp; ?> name="chkphp" value="si" id="">
         <br/> html: <input type="checkbox" <?php  echo $chkhtml; ?> name="chkhtml" alue="si" id="">
         <br/> css: <input type="checkbox" <?php echo $chkcss; ?> name="chkcss" value="si" id="">
+        <br/>
+
+        Que anime te gusta?... <br/>
+        <select name="lsAnime" id="">
+            <option value="">Ningun anime</option> <br/>
+            <option value="naruto" <?php echo ($lstAnime=="naruto")?"selected":"" ?> >Naruto</option> <br/>
+            <option value="bleach" <?php echo ($lstAnime=="bleach")?"selected":"" ?> >Bleach</option> <br/>
+            <option value="onepiece" <?php echo ($lstAnime=="onepiece")?"selected":"" ?> >One Piece</option> <br/>
+
+        
+        </select>
 
         <br/> <input type="submit" value="Enviar informacion">
 
