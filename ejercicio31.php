@@ -8,17 +8,18 @@ $chkhtml="";
 $chkcss="";
 
 $lstAnime ="";
+$txtComentario ="";
 
 if($_POST){
 
     $txtNombre= (isset($_POST['txtNombre']))?$_POST['txtNombre']:"";
     $rdgLenguaje= (isset($_POST['lenguaje']))?$_POST['lenguaje']:"";
-
     $chkphp= (isset($_POST['chkphp'])=="si")?"checked":"";
     $chkhtml= (isset($_POST['chkhtml'])=="si")?"checked":"";
     $chkcss= (isset($_POST['chkcss'])=="si")?"checked":"";
-
     $lstAnime = (isset($_POST['lsAnime']))?$_POST['lsAnime']:"";
+    $txtComentario= (isset($_POST['txtComentario']))?$_POST['txtComentario']:"";
+    //INSTRUCCION DE INSERT
 
     //print_r($lstAnime);
 
@@ -51,6 +52,8 @@ if($_POST){
         <br/>
         <strong> Tu anime favorito es: </strong>
         <?php echo $lstAnime; ?>
+        <br/>
+        <strong>Tu mensaje es: </strong> <?php echo $txtComentario;  ?>
     
     <?php  }  ?>  
 
@@ -80,8 +83,14 @@ if($_POST){
 
         
         </select>
-
-        <br/> <input type="submit" value="Enviar informacion">
+        <br/> 
+        
+        ¿Tienes alguna duda?<br/>
+        <textarea name="txtComentario" id="" cols="30" rows="10"></textarea>
+        <?php echo $txtComentario; ?>
+        <br/>
+        
+        <input type="submit" value="Enviar informacion">
 
     </form>
 
